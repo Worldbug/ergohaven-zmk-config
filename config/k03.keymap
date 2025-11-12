@@ -26,6 +26,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp PG_UP>, <&kp PG_DN>;
         };
+
+        enc_tabs: enc_tabs {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_TABS";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(TAB)>, <&kp LC(LS(TAB))>;
+        };
     };
 
     keymap {
@@ -62,7 +69,7 @@
             display-name = "Function";
             sensor-bindings =
                 <&enc_bright>,
-                <&enc_scroll>,
+                <&enc_tabs>,
                 <&enc_scroll>,
                 <&enc_scroll>,
                 <&enc_scroll>,
